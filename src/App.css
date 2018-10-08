@@ -1,32 +1,69 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  min-height: 100vh;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-page {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: 560px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.bg-page input {
+  flex: 1 100%;
+  margin: 5px;
+  padding: 3px;
+  background: rgb(236, 236, 236);
+  border-style: none;
+  border: 1px solid #222;
+  box-sizing: border-box;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.bg-page input.active:invalid {
+  border: 1px solid red;
+}
+
+.bg-page span {
+  display: inline-block;
+  min-width: 40px;
+}
+
+.btn-bg-page {
+  flex-basis: 50%;
+  min-width: 40px;
+  padding: 5px 10px;
+  margin: 5px;
+  box-sizing: border-box;
+	border-style: none;
+	background: rgb(236, 236, 236);
+  color: black;
+  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+}
+
+.btn-bg-page:hover {
+	cursor: pointer;
+	background: #222;
+  color: white;
+}
+
+@media screen and (max-width: 490px) {
+  .bg-page {
+    flex-direction: column;
+    flex-basis: 75%;
   }
 }
